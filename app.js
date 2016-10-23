@@ -16,6 +16,14 @@ app.get("/dog", function(req,res){
   res.send("meow!");
 });
 
+app.get("/r/:whateverName", function(req,res){
+  res.send("Welcome to the whatever you asked for!!");
+});
+
+app.get("*", function(req,res){
+  res.send("You are a star!!!");
+});
+
 //======================SERVER========================
 
 // Tell express which port to listen tonode
